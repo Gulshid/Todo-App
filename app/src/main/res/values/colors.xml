@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Backgrounds -->
+    <color name="bg_primary">#0D0F1A</color>
+    <color name="bg_surface">#161826</color>
+    <color name="card_bg">#1A1D2E</color>
+
+    <!-- Text -->
+    <color name="text_primary">#EDF0FF</color>
+    <color name="text_secondary">#6B7094</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Accent — teal/mint (Flutter-inspired) -->
+    <color name="accent_teal">#2CCFA8</color>
+    <color name="accent_teal_dark">#1A9E80</color>
+
+    <!-- Priority -->
+    <color name="priority_high">#FF5370</color>
+    <color name="priority_medium">#FFB830</color>
+    <color name="priority_low">#2CCFA8</color>
+
+    <!-- Checkbox -->
+    <color name="checkbox_tint">#2CCFA8</color>
+
+    <!-- Snackbar -->
+    <color name="snackbar_bg">#252840</color>
 </resources>

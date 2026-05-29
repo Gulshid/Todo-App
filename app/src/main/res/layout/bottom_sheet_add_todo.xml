@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_bg"
+    android:paddingHorizontal="20dp"
+    android:paddingBottom="32dp">
+
+    <!-- Handle bar -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/handle_bar"/>
+
+    <!-- Sheet title -->
+    <TextView
+        android:id="@+id/tvSheetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Task"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Title input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTodoTitle"
+        style="@style/InputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="What needs to be done?">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTodoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:textColor="@color/text_primary"
+            android:maxLines="2"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Description input -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/InputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add a note (optional)"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTodoDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColor="@color/text_primary"
+            android:minLines="2"
+            android:maxLines="4"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Priority -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRIORITY"
+        android:textSize="11sp"
+        android:textColor="@color/text_secondary"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/rbMedium">
+
+        <RadioButton
+            android:id="@+id/rbLow"
+            style="@style/PriorityRadio"
+            android:text="Low"
+            android:textColor="@color/priority_low"/>
+
+        <RadioButton
+            android:id="@+id/rbMedium"
+            style="@style/PriorityRadio"
+            android:text="Medium"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="@color/priority_medium"/>
+
+        <RadioButton
+            android:id="@+id/rbHigh"
+            style="@style/PriorityRadio"
+            android:text="High"
+            android:textColor="@color/priority_high"/>
+
+    </RadioGroup>
+
+    <!-- Category -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CATEGORY"
+        android:textSize="11sp"
+        android:textColor="@color/text_secondary"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cgCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:selectionRequired="true">
+
+        <com.google.android.material.chip.Chip
+            style="@style/CategoryChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal"
+            android:checked="true"/>
+
+        <com.google.android.material.chip.Chip
+            style="@style/CategoryChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Work"/>
+
+        <com.google.android.material.chip.Chip
+            style="@style/CategoryChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shopping"/>
+
+        <com.google.android.material.chip.Chip
+            style="@style/CategoryChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Save button -->
+    <Button
+        android:id="@+id/btnSaveTodo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="Save Task"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/btn_save_bg"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>

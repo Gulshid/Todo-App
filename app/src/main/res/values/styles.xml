@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Filter chip on main screen -->
+    <style name="FilterChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="chipBackgroundColor">@color/bg_surface</item>
+        <item name="chipStrokeColor">#2A2D42</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="chipMinHeight">32dp</item>
+        <item name="chipCornerRadius">10dp</item>
+    </style>
+
+    <!-- Category chip in bottom sheet -->
+    <style name="CategoryChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="chipBackgroundColor">@color/bg_primary</item>
+        <item name="chipStrokeColor">#2A2D42</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="chipMinHeight">32dp</item>
+        <item name="chipCornerRadius">10dp</item>
+    </style>
+
+    <!-- TextInput field style -->
+    <style name="InputField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">#1A1D2E</item>
+        <item name="boxStrokeColor">#2A2D42</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="hintTextColor">#555870</item>
+        <item name="android:textColorHint">#555870</item>
+    </style>
+
+    <!-- Priority radio button -->
+    <style name="PriorityRadio" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="buttonTint">@color/accent_teal</item>
+    </style>
+
+    <!-- Bottom sheet rounded theme -->
+    <style name="BottomSheetTheme" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/BottomSheetShapeOverlay</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetShapeOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">28dp</item>
+        <item name="cornerSizeTopRight">28dp</item>
+    </style>
+
+</resources>
